@@ -50,32 +50,32 @@ const EventsPage = () => {
     return (
       <div 
         className={`transform transition-all duration-1000 delay-${index * 100} ${
-          eventsVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+          eventsVisible ? 'tranred-y-0 opacity-100' : 'tranred-y-8 opacity-0'
         }`}
       >
-        <div className={`bg-white border border-slate-200 hover:shadow-lg transition-all duration-300 overflow-hidden group ${
-          upcoming ? 'hover:border-slate-300' : 'opacity-75'
+        <div className={`bg-white border border-red-200 hover:shadow-lg transition-all duration-300 overflow-hidden group ${
+          upcoming ? 'hover:border-red-300' : 'opacity-75'
         }`}>
           
           {/* Event Image */}
-          <div className="relative h-48 bg-gradient-to-br from-slate-200 to-slate-300 overflow-hidden">
+          <div className="relative h-48 bg-gradient-to-br from-white to-red-50 overflow-hidden">
             {/* Image placeholder - replace with actual image when available */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-slate-500 text-center">
+              <div className="text-red-500 text-center">
                 <Megaphone className="w-12 h-12 mx-auto mb-2" />
                 <p className="text-sm">Event Image</p>
               </div>
             </div>
             
             {/* Date badge */}
-            <div className={`absolute top-4 left-4 bg-white shadow-sm border border-slate-200 p-3 text-center ${
-              upcoming ? '' : 'bg-slate-100'
+            <div className={`absolute top-4 left-4 bg-white shadow-sm border border-red-200 p-3 text-center ${
+              upcoming ? '' : 'bg-red-100'
             }`}>
-              <div className={`text-2xl font-light ${upcoming ? 'text-slate-800' : 'text-slate-600'} leading-none`}>
+              <div className={`text-2xl font-light ${upcoming ? 'text-red-800' : 'text-red-600'} leading-none`}>
                 {dateInfo.day}
               </div>
               <div className={`text-xs font-medium tracking-wide uppercase ${
-                upcoming ? 'text-slate-600' : 'text-slate-500'
+                upcoming ? 'text-red-600' : 'text-red-500'
               }`}>
                 {dateInfo.month}
               </div>
@@ -88,7 +88,7 @@ const EventsPage = () => {
               </div>
             )}
             {!upcoming && (
-              <div className="absolute top-4 right-4 bg-slate-600 text-white px-3 py-1 text-xs font-medium tracking-wide uppercase">
+              <div className="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 text-xs font-medium tracking-wide uppercase">
                 Past Event
               </div>
             )}
@@ -97,20 +97,20 @@ const EventsPage = () => {
           {/* Event Content */}
           <div className="p-6">
             <div className="mb-4">
-              <h3 className={`text-xl font-medium mb-2 group-hover:text-slate-900 transition-colors ${
-                upcoming ? 'text-slate-800' : 'text-slate-600'
+              <h3 className={`text-xl font-medium mb-2 group-hover:text-red-900 transition-colors ${
+                upcoming ? 'text-red-800' : 'text-red-600'
               }`}>
                 {event.title}
               </h3>
               
-              <div className="flex items-center text-sm text-slate-500 mb-3">
+              <div className="flex items-center text-sm text-red-500 mb-3">
                 <Clock className="w-4 h-4 mr-2" />
                 {dateInfo.fullDate}
               </div>
             </div>
 
             <p className={`leading-relaxed mb-6 ${
-              upcoming ? 'text-slate-600' : 'text-slate-500'
+              upcoming ? 'text-red-600' : 'text-red-500'
             }`}>
               {event.description}
             </p>
@@ -118,8 +118,8 @@ const EventsPage = () => {
             {/* Action button */}
             <button className={`flex items-center gap-2 font-medium tracking-wide transition-all duration-200 ${
               upcoming 
-                ? 'text-slate-700 hover:text-slate-900' 
-                : 'text-slate-500 cursor-default'
+                ? 'text-red-700 hover:text-red-900' 
+                : 'text-red-500 cursor-default'
             }`}>
               {upcoming ? 'Learn More' : 'Event Details'}
               {upcoming && <ArrowRight size={16} />}
@@ -147,41 +147,25 @@ const EventsPage = () => {
           }`}>
             
             {/* Professional badge */}
-            <div className="inline-flex items-center bg-slate-50 border border-slate-200 px-4 py-2 rounded-sm mb-8">
-              <Calendar className="w-4 h-4 text-slate-600 mr-2" />
-              <span className="text-slate-700 font-medium text-sm tracking-wide">COMMUNITY EVENTS</span>
+            <div className="inline-flex items-center bg-white border border-red-200 px-4 py-2 rounded-sm mb-8">
+              <Calendar className="w-4 h-4 text-red-600 mr-2" />
+              <span className="text-red-700 font-medium text-sm tracking-wide">COMMUNITY EVENTS</span>
             </div>
 
             {/* Page title */}
-            <h1 className="text-4xl lg:text-5xl font-light text-slate-900 mb-6 leading-tight">
+            <h1 className="text-4xl lg:text-5xl font-light text-red-900 mb-6 leading-tight">
               Upcoming Events &
               <br />
-              <span className="font-normal text-slate-700">Community Gatherings</span>
+              <span className="font-normal text-red-700">Community Gatherings</span>
             </h1>
             
-            <div className="w-16 h-0.5 bg-slate-400 mx-auto mb-8"></div>
+            <div className="w-16 h-0.5 bg-red-400 mx-auto mb-8"></div>
             
             {/* Description */}
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed mb-12">
+            <p className="text-lg text-red-800 max-w-3xl mx-auto leading-relaxed mb-12">
               Join us in building stronger communities through meaningful events, rallies, and initiatives. 
               Together, we work towards positive change and sustainable development for all.
             </p>
-
-            {/* Event stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
-              <div className="text-center">
-                <div className="text-3xl font-light text-slate-800 mb-2">{upcomingEvents.length}</div>
-                <div className="text-sm text-slate-500 font-medium tracking-wider uppercase">Upcoming Events</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-light text-slate-800 mb-2">{events.length}</div>
-                <div className="text-sm text-slate-500 font-medium tracking-wider uppercase">Total Events</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-light text-slate-800 mb-2">Community</div>
-                <div className="text-sm text-slate-500 font-medium tracking-wider uppercase">Focused</div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -193,19 +177,19 @@ const EventsPage = () => {
             
             {/* Section Header */}
             <div className={`mb-16 transform transition-all duration-1000 ${
-              eventsVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+              eventsVisible ? 'tranred-y-0 opacity-100' : 'tranred-y-8 opacity-0'
             }`}>
               <div className="flex items-center gap-4 mb-6">
-                <div className="bg-green-600 p-2">
+                <div className="bg-red-800 p-2">
                   <Users className="w-5 h-5 text-white" />
                 </div>
-                <h2 className="text-2xl lg:text-3xl font-light text-slate-900">
+                <h2 className="text-2xl lg:text-3xl font-light text-red-900">
                   Upcoming 
-                  <span className="font-normal text-slate-700 ml-2">Events</span>
+                  <span className="font-normal text-red-700 ml-2">Events</span>
                 </h2>
               </div>
               
-              <p className="text-slate-600 leading-relaxed max-w-2xl">
+              <p className="text-red-600 leading-relaxed max-w-2xl">
                 Don't miss these important community events. Mark your calendars and join us in making a difference.
               </p>
             </div>
@@ -232,19 +216,19 @@ const EventsPage = () => {
             
             {/* Section Header */}
             <div className={`mb-16 transform transition-all duration-1000 delay-300 ${
-              eventsVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+              eventsVisible ? 'tranred-y-0 opacity-100' : 'tranred-y-8 opacity-0'
             }`}>
               <div className="flex items-center gap-4 mb-6">
-                <div className="bg-slate-600 p-2">
+                <div className="bg-red-600 p-2">
                   <Calendar className="w-5 h-5 text-white" />
                 </div>
-                <h2 className="text-2xl lg:text-3xl font-light text-slate-900">
+                <h2 className="text-2xl lg:text-3xl font-light text-red-900">
                   Past 
-                  <span className="font-normal text-slate-700 ml-2">Events</span>
+                  <span className="font-normal text-red-700 ml-2">Events</span>
                 </h2>
               </div>
               
-              <p className="text-slate-600 leading-relaxed max-w-2xl">
+              <p className="text-red-600 leading-relaxed max-w-2xl">
                 Explore our recent community initiatives and successful events that have made a positive impact.
               </p>
             </div>
@@ -265,28 +249,25 @@ const EventsPage = () => {
       )}
 
       {/* Call to Action Section */}
-      <section className="py-20 bg-slate-800">
+      <section className="py-20 bg-red-800">
         <div className="w-full max-w-7xl mx-auto px-6 lg:px-8">
           <div className={`text-center transform transition-all duration-1000 delay-500 ${
-            eventsVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+            eventsVisible ? 'tranred-y-0 opacity-100' : 'tranred-y-8 opacity-0'
           }`}>
             <h3 className="text-2xl lg:text-3xl font-light text-white mb-6">
               Stay Connected &
-              <span className="font-normal text-slate-300 ml-2">Get Involved</span>
+              <span className="font-normal text-red-300 ml-2">Get Involved</span>
             </h3>
             
-            <div className="w-16 h-0.5 bg-slate-400 mx-auto mb-8"></div>
+            <div className="w-16 h-0.5 bg-red-400 mx-auto mb-8"></div>
             
-            <p className="text-slate-300 leading-relaxed text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-red-300 leading-relaxed text-lg mb-8 max-w-2xl mx-auto">
               Be the first to know about upcoming events and opportunities to contribute to our community initiatives.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-slate-800 hover:bg-slate-100 px-8 py-3 font-medium tracking-wide transition-all duration-200">
-                SUBSCRIBE TO UPDATES
-              </button>
-              <button className="border border-slate-400 text-slate-300 hover:bg-slate-700 px-8 py-3 font-medium tracking-wide transition-all duration-200">
-                VOLUNTEER WITH US
+              <button className="bg-white text-red-800 hover:bg-red-100 px-8 py-3 font-medium tracking-wide transition-all duration-200">
+              VOLUNTEER WITH US
               </button>
             </div>
           </div>

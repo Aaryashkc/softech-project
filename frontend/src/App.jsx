@@ -7,6 +7,8 @@ import EventsPage from './pages/EventsPage'
 import NewsPage from './pages/NewsPage'
 import ContactPage from './pages/ContactPage'
 import BiographyPage from './pages/BiographyPage'
+import GalleryPage from './pages/GalleryPage'
+import BookstorePage from './pages/BookStore'
 
 const App = () => {
   return (
@@ -19,6 +21,8 @@ const App = () => {
           <Route path="/news" element={<NewsPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/biography" element={<BiographyPage />} />
+          <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/bookstore" element={<BookstorePage />} />
         </Routes>
       </div>
       <Footer />

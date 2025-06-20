@@ -64,16 +64,16 @@ const NewsPage = () => {
     return (
       <div 
         className={`transform transition-all duration-1000 delay-${index * 100} ${
-          newsVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+          newsVisible ? 'tranred-y-0 opacity-100' : 'tranred-y-8 opacity-0'
         }`}
       >
-        <div className="bg-white border border-slate-200 hover:shadow-xl transition-all duration-300 overflow-hidden group">
+        <div className="bg-white border border-red-200 hover:shadow-xl transition-all duration-300 overflow-hidden group">
           
           {/* News Image */}
-          <div className="relative h-64 bg-gradient-to-br from-slate-200 to-slate-300 overflow-hidden">
+          <div className="relative h-64 bg-gradient-to-br from-white to-red-50 overflow-hidden">
             {/* Image placeholder */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-slate-500 text-center">
+              <div className="text-red-500 text-center">
                 <Newspaper className="w-16 h-16 mx-auto mb-2" />
                 <p className="text-sm">News Image</p>
               </div>
@@ -88,41 +88,41 @@ const NewsPage = () => {
 
             {/* Date overlay */}
             <div className="absolute bottom-4 left-4 bg-white bg-opacity-90 backdrop-blur-sm px-3 py-2 text-sm">
-              <div className="font-medium text-slate-800">{dateInfo.fullDate}</div>
-              <div className="text-slate-600 text-xs">{dateInfo.timeAgo}</div>
+              <div className="font-medium text-red-800">{dateInfo.fullDate}</div>
+              <div className="text-red-600 text-xs">{dateInfo.timeAgo}</div>
             </div>
           </div>
 
           {/* News Content */}
           <div className="p-6">
             <div className="mb-4">
-              <h2 className="text-2xl font-medium text-slate-800 mb-3 group-hover:text-slate-900 transition-colors leading-tight">
+              <h2 className="text-2xl font-medium text-red-800 mb-3 group-hover:text-red-900 transition-colors leading-tight">
                 {article.title}
               </h2>
               
-              <div className="flex items-center text-sm text-slate-500 mb-4">
+              <div className="flex items-center text-sm text-red-500 mb-4">
                 <Clock className="w-4 h-4 mr-2" />
                 Published {dateInfo.timeAgo}
               </div>
             </div>
 
-            <p className="text-slate-600 leading-relaxed mb-6 text-lg">
+            <p className="text-red-600 leading-relaxed mb-6 text-lg">
               {article.description}
             </p>
 
             {/* Action buttons */}
             <div className="flex items-center justify-between">
-              <button className="flex items-center gap-2 text-slate-700 hover:text-slate-900 font-medium tracking-wide transition-all duration-200">
+              <button className="flex items-center gap-2 text-red-700 hover:text-red-900 font-medium tracking-wide transition-all duration-200">
                 Read Full Story
                 <ArrowRight size={16} />
               </button>
               
-              <div className="flex items-center gap-4 text-slate-500">
-                <button className="flex items-center gap-1 hover:text-slate-700 transition-colors">
+              <div className="flex items-center gap-4 text-red-500">
+                <button className="flex items-center gap-1 hover:text-red-700 transition-colors">
                   <Eye size={16} />
                   <span className="text-sm">View</span>
                 </button>
-                <button className="flex items-center gap-1 hover:text-slate-700 transition-colors">
+                <button className="flex items-center gap-1 hover:text-red-700 transition-colors">
                   <Share2 size={16} />
                   <span className="text-sm">Share</span>
                 </button>
@@ -140,35 +140,35 @@ const NewsPage = () => {
     return (
       <div 
         className={`transform transition-all duration-1000 delay-${index * 100} ${
-          newsVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+          newsVisible ? 'tranred-y-0 opacity-100' : 'tranred-y-8 opacity-0'
         }`}
       >
-        <div className="bg-white border border-slate-200 hover:shadow-lg transition-all duration-300 overflow-hidden group">
+        <div className="bg-white border border-red-200 hover:shadow-lg transition-all duration-300 overflow-hidden group">
           
           <div className="flex">
             {/* News Image */}
-            <div className="w-1/3 h-32 bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center">
-              <Newspaper className="w-8 h-8 text-slate-500" />
+            <div className="w-1/3 h-32 bg-gradient-to-br from-red-200 to-red-300 flex items-center justify-center">
+              <Newspaper className="w-8 h-8 text-red-500" />
             </div>
 
             {/* News Content */}
             <div className="flex-1 p-4">
               <div className="mb-2">
-                <h3 className="text-lg font-medium text-slate-800 mb-1 group-hover:text-slate-900 transition-colors leading-tight">
+                <h3 className="text-lg font-medium text-red-800 mb-1 group-hover:text-red-900 transition-colors leading-tight">
                   {article.title}
                 </h3>
                 
-                <div className="flex items-center text-xs text-slate-500 mb-2">
+                <div className="flex items-center text-xs text-red-500 mb-2">
                   <Clock className="w-3 h-3 mr-1" />
                   {dateInfo.timeAgo}
                 </div>
               </div>
 
-              <p className="text-slate-600 text-sm leading-relaxed mb-3 line-clamp-2">
+              <p className="text-red-600 text-sm leading-relaxed mb-3 line-clamp-2">
                 {article.description}
               </p>
 
-              <button className="flex items-center gap-1 text-slate-600 hover:text-slate-800 text-sm font-medium transition-colors">
+              <button className="flex items-center gap-1 text-red-600 hover:text-red-800 text-sm font-medium transition-colors">
                 Read More
                 <ArrowRight size={12} />
               </button>
@@ -180,7 +180,7 @@ const NewsPage = () => {
   };
 
   return (
-    <div className="bg-slate-50 min-h-screen">
+    <div className="bg-red-50 min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 bg-white">
         {/* Subtle background pattern */}
@@ -192,45 +192,29 @@ const NewsPage = () => {
 
         <div className="relative w-full max-w-7xl mx-auto px-6 lg:px-8">
           <div className={`text-center transform transition-all duration-1000 ${
-            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+            isVisible ? 'tranred-y-0 opacity-100' : 'tranred-y-8 opacity-0'
           }`}>
             
             {/* Professional badge */}
-            <div className="inline-flex items-center bg-slate-50 border border-slate-200 px-4 py-2 rounded-sm mb-8">
-              <Newspaper className="w-4 h-4 text-slate-600 mr-2" />
-              <span className="text-slate-700 font-medium text-sm tracking-wide">LATEST NEWS & UPDATES</span>
+            <div className="inline-flex items-center bg-white border border-red-200 px-4 py-2 rounded-sm mb-8">
+              <Newspaper className="w-4 h-4 text-red-600 mr-2" />
+              <span className="text-red-700 font-medium text-sm tracking-wide">LATEST NEWS & UPDATES</span>
             </div>
 
             {/* Page title */}
-            <h1 className="text-4xl lg:text-5xl font-light text-slate-900 mb-6 leading-tight">
+            <h1 className="text-4xl lg:text-5xl font-light text-red-900 mb-6 leading-tight">
               News & 
               <br />
-              <span className="font-normal text-slate-700">Media Coverage</span>
+              <span className="font-normal text-red-700">Media Coverage</span>
             </h1>
             
-            <div className="w-16 h-0.5 bg-slate-400 mx-auto mb-8"></div>
+            <div className="w-16 h-0.5 bg-red-400 mx-auto mb-8"></div>
             
             {/* Description */}
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed mb-12">
+            <p className="text-lg text-red-800 max-w-3xl mx-auto leading-relaxed mb-12">
               Stay informed with the latest news, interviews, and media coverage of our ongoing initiatives, 
               policy developments, and community engagement efforts across Nepal.
             </p>
-
-            {/* News stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
-              <div className="text-center">
-                <div className="text-3xl font-light text-slate-800 mb-2">{recentNews.length}</div>
-                <div className="text-sm text-slate-500 font-medium tracking-wider uppercase">Recent Updates</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-light text-slate-800 mb-2">{news.length}</div>
-                <div className="text-sm text-slate-500 font-medium tracking-wider uppercase">Total Articles</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-light text-slate-800 mb-2">Media</div>
-                <div className="text-sm text-slate-500 font-medium tracking-wider uppercase">Coverage</div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -242,19 +226,19 @@ const NewsPage = () => {
             
             {/* Section Header */}
             <div className={`mb-16 transform transition-all duration-1000 ${
-              newsVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+              newsVisible ? 'tranred-y-0 opacity-100' : 'tranred-y-8 opacity-0'
             }`}>
               <div className="flex items-center gap-4 mb-6">
-                <div className="bg-red-600 p-2">
+                <div className="bg-red-800 p-2">
                   <Newspaper className="w-5 h-5 text-white" />
                 </div>
-                <h2 className="text-2xl lg:text-3xl font-light text-slate-900">
+                <h2 className="text-2xl lg:text-3xl font-light text-red-900">
                   Latest 
-                  <span className="font-normal text-slate-700 ml-2">News</span>
+                  <span className="font-normal text-red-700 ml-2">News</span>
                 </h2>
               </div>
               
-              <p className="text-slate-600 leading-relaxed max-w-2xl">
+              <p className="text-red-600 leading-relaxed max-w-2xl">
                 Breaking news and recent updates on policy initiatives, community visits, and media appearances.
               </p>
             </div>
@@ -280,19 +264,19 @@ const NewsPage = () => {
             
             {/* Section Header */}
             <div className={`mb-16 transform transition-all duration-1000 delay-300 ${
-              newsVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+              newsVisible ? 'tranred-y-0 opacity-100' : 'tranred-y-8 opacity-0'
             }`}>
               <div className="flex items-center gap-4 mb-6">
-                <div className="bg-slate-600 p-2">
+                <div className="bg-red-700 p-2">
                   <BookOpen className="w-5 h-5 text-white" />
                 </div>
-                <h2 className="text-2xl lg:text-3xl font-light text-slate-900">
+                <h2 className="text-2xl lg:text-3xl font-light text-red-900">
                   News 
-                  <span className="font-normal text-slate-700 ml-2">Archive</span>
+                  <span className="font-normal text-red-700 ml-2">Archive</span>
                 </h2>
               </div>
               
-              <p className="text-slate-600 leading-relaxed max-w-2xl">
+              <p className="text-red-600 leading-relaxed max-w-2xl">
                 Browse through our comprehensive archive of past news articles, interviews, and media coverage.
               </p>
             </div>
@@ -312,19 +296,19 @@ const NewsPage = () => {
       )}
 
       {/* Newsletter Subscription Section */}
-      <section className="py-20 bg-slate-800">
+      <section className="py-20 bg-red-800">
         <div className="w-full max-w-7xl mx-auto px-6 lg:px-8">
           <div className={`text-center transform transition-all duration-1000 delay-500 ${
-            newsVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+            newsVisible ? 'tranred-y-0 opacity-100' : 'tranred-y-8 opacity-0'
           }`}>
             <h3 className="text-2xl lg:text-3xl font-light text-white mb-6">
               Stay Informed &
-              <span className="font-normal text-slate-300 ml-2">Never Miss Updates</span>
+              <span className="font-normal text-red-300 ml-2">Never Miss Updates</span>
             </h3>
             
-            <div className="w-16 h-0.5 bg-slate-400 mx-auto mb-8"></div>
+            <div className="w-16 h-0.5 bg-red-400 mx-auto mb-8"></div>
             
-            <p className="text-slate-300 leading-relaxed text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-red-300 leading-relaxed text-lg mb-8 max-w-2xl mx-auto">
               Subscribe to our newsletter to receive the latest news, policy updates, and exclusive insights 
               directly in your inbox.
             </p>
@@ -333,14 +317,14 @@ const NewsPage = () => {
               <input 
                 type="email" 
                 placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 bg-white text-slate-800 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-400"
+                className="flex-1 px-4 py-3 bg-white text-red-800 placeholder-red-500 focus:outline-none focus:ring-2 focus:ring-red-400"
               />
               <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 font-medium tracking-wide transition-all duration-200">
                 SUBSCRIBE
               </button>
             </div>
             
-            <p className="text-slate-400 text-sm mt-4">
+            <p className="text-red-400 text-sm mt-4">
               Join thousands of subscribers who stay updated with our work.
             </p>
           </div>
