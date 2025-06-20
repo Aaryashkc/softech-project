@@ -93,13 +93,6 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          
-          {/* Political Disclaimer */}
-          <div className="mt-6 pt-6 border-t border-red-300">
-            <p className="text-red-300 text-xs leading-relaxed">
-              By Softech Foundation
-            </p>
-          </div>
         </div>
       </div>
     </footer>
