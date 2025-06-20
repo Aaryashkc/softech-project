@@ -38,8 +38,8 @@ const Footer = () => {
             <h4 className="font-medium mb-6 text-slate-200 tracking-wide uppercase text-sm">Navigation</h4>
             <ul className="space-y-3">
               {[
-                { path: '/about', label: 'About' },
-                { path: '/platform', label: 'Platform' },
+                { path: '/biography', label: 'Biography' },
+                { path: '/events', label: 'Events' },
                 { path: '/news', label: 'News' },
                 { path: '/contact', label: 'Contact' }
               ].map((item) => (
